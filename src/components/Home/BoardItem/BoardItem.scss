@@ -1,12 +1,33 @@
-.board-item {
-  display: grid;
-  grid-template-columns: 2fr 2fr;
-  float: left;
-  background: white;
-  margin: 10px;
-}
+@import "../../../index.scss";
+
+// .board-item {
+
+//   display: grid;
+//   grid-template-columns: 2fr 2fr;
+//   float: left;
+//   background: white;
+//   margin: 10px;
+// }
 
 // @media screen and (min-width: 668px) {
 //   display: grid;
 //   grid-template-columns: repeat(4, 2fr);
 // }
+
+h3 {
+  text-transform: capitalize;
+}
+
+form {
+  margin-bottom: 4px;
+}
+
+.todo-list {
+  ul {
+    list-style-type: none;
+    margin: 2px 0 2px 0;
+  }
+  li {
+    background-color: $mainGreen;
+  }
+}

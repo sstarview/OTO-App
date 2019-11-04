@@ -3,9 +3,16 @@ import "./BoardList.scss";
 import BoardItem from "../BoardItem/BoardItem";
 import { Droppable } from "react-beautiful-dnd";
 import styled from "styled-components";
+import "./BoardList";
 
 const List = styled.div`
-  text-transform: capitalize;
+  max-width: 100%;
+  margin-top: 10px;
+  /* background-color: #fff; */
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 10px;
+  text-align: center;
 `;
 
 export default class BoardList extends Component {

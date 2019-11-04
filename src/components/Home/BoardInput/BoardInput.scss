@@ -1,0 +1,21 @@
+@import "../../../index.scss";
+
+.board-input {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  //   flex-wrap: wrap;
+  input {
+    width: 40vw;
+    height: 2rem;
+    // margin: 2px;
+    background-color: $mainGrey;
+  }
+  button {
+    margin-left: 3px;
+    padding: 2px;
+    text-transform: uppercase;
+    background-color: $mainBlack;
+    color: $mainGrey;
+  }
+}
