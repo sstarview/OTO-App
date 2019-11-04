@@ -37,18 +37,22 @@ export default class BoardItem extends Component {
     this.setState({
       todos: updatedTodo,
       todo: "",
-      id: uuid()
+      todoId: uuid()
     });
   };
 
-  handleDelete = () => {};
-
-  handleEdit = () => {};
+  handleDelete = id => {
+    const filteredItems = this.state.todos.filter(item => item.id !== id);
+    console.log(filteredItems);
+    this.setState({
+      todos: filteredItems
+    });
+  };
 
   render() {
     // const { title } = this.props;
 
-    console.log(this.state);
+    // console.log(this.state.todos);
     return (
       <Draggable
         draggableId={this.props.title.boardId}
@@ -74,7 +78,14 @@ export default class BoardItem extends Component {
               return (
                 <div className="todo-list">
                   <ul>
-                    <li key={item.id}>{item.todoTitle}</li>
+                    <li
+                      onClick={() => {
+                        this.handleDelete(item.id);
+                      }}
+                      key={item.id}
+                    >
+                      {item.todoTitle}
+                    </li>
                   </ul>
                 </div>
               );
