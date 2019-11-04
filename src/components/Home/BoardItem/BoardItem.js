@@ -50,9 +50,6 @@ export default class BoardItem extends Component {
   };
 
   render() {
-    // const { title } = this.props;
-
-    // console.log(this.state.todos);
     return (
       <Draggable
         draggableId={this.props.title.boardId}
@@ -72,7 +69,9 @@ export default class BoardItem extends Component {
                 placeholder="Add Todo Item"
                 value={this.state.todo}
               />
-              <button type="submit">Add</button>
+              <button disabled={this.state.todo ? false : true} type="submit">
+                Add
+              </button>
             </form>
             {this.state.todos.map(item => {
               return (

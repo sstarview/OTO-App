@@ -13,7 +13,9 @@ export default class BoardInput extends Component {
           value={board}
           onChange={handleChange}
         />
-        <button type="submit">Add</button>
+        <button disabled={board ? false : true} type="submit">
+          Add
+        </button>
       </form>
     );
   }
